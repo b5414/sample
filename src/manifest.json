@@ -1,0 +1,19 @@
+{
+	"name": "sample",
+	"version": "1.0.1",
+	"manifest_version": 3,
+	"icons": {"32": "icons/icon.png", "48": "icons/icon.png", "64": "icons/icon.png", "128": "icons/icon.png"},
+	"background": {"service_worker": "background.js", "type": "module"},
+	"permissions": ["alarms", "downloads", "tabs", "scripting", "storage", "unlimitedStorage"],
+	"host_permissions": ["https://*/*", "http://*/*"],
+	"action": {
+		"default_icon": {"32": "icons/icon.png", "48": "icons/icon.png", "64": "icons/icon.png", "128": "icons/icon.png"},
+		"default_title": "sample"
+	},
+	"web_accessible_resources": [
+		{
+			"matches": ["https://*/*", "http://*/*"],
+			"resources": ["jquery.min.js", "rendered/assets/basic.js"]
+		}
+	]
+}
